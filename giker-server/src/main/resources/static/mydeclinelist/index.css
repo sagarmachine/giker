@@ -1,0 +1,139 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  padding-bottom: 5%;
+  height: 100%;
+  background-attachment: fixed;
+  background-image: url("img5.jpeg");
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin: 0;
+  z-index: 3;
+}
+@keyframes test2 {
+  0% {
+    color: chartreuse;
+  }
+
+  10% {
+    color: tomato;
+  }
+
+  20% {
+    color: aqua;
+  }
+
+  30% {
+    color: #efa8e4;
+  }
+
+  40% {
+    color: #8ec6c5;
+  }
+
+  50% {
+    color: #363062;
+  }
+
+  60% {
+    color: #d8ebb5;
+  }
+
+  70% {
+    color: #f76a8c;
+  }
+
+  80% {
+    color: #c70039;
+  }
+
+  90% {
+    color: #f5fcc1;
+  }
+
+  100% {
+    color: #596157;
+  }
+}
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 70px;
+  font-family: cursive;
+  animation: test2 3s infinite;
+  animation-timing-function: linear;
+  display: table;
+  z-index: 3;
+}
+input{
+  height: 40px;
+  margin-right: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+  padding-left: 10px;
+}
+.search{
+  margin: 0 auto;
+}
+.search-btn{
+  height: 40px;
+   position: relative;
+   top: -2.5px;
+   left: 5px;
+   background: black;
+   border: none;
+}
+.box1,.box2{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.9);
+}
+.box{
+  color:white;
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: repeat(1 , minmax(150px , auto));
+  line-height: 2.5;
+}
+.mainpic{
+  background: white;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+.box2{
+  position: relative;
+}
+.picture{
+  display: inline;
+  text-align: center;
+}
+
+
+.accepted{
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 10px;
+}
+@media screen and (min-width:450px) {
+  .picture{
+    float: left;
+    margin-right:  20px;
+  }
+}
+@media screen and (min-width:850px) {
+  .box{
+      grid-template-columns: repeat(1 , minmax(200px , auto));
+       grid-template-rows: 1fr;
+  }
+}

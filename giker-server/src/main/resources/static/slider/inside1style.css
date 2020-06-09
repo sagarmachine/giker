@@ -1,0 +1,84 @@
+body {
+  bacground-color: #00bcd4;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+  background-attachment:fixed;
+  background: linear-gradient(45deg,#142850, #0779e4, #8ec6c5 , #77d8d8, #eff3c6);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: 5px;
+  font-family: 'Girassol', cursive;
+  color: ;
+}
+
+.nav-link {
+  margin: 0 20px;
+  font-family: 'Inconsolata', monospace;
+}
+
+footer{
+  margin-top: 100px;
+  text-align: center;
+  opacity: 0.5;
+  padding: 0 -5% 20px -5%;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/* topic-title */
+.topic-title{
+  text-align: center;
+  font-family: 'Oswald-bold', sans-serif ;
+  font-size:4em;
+}
+
+@media screen and (max-width:360px) {
+
+  .topic-title{
+    font-size:3em;
+  }
+
+
+}
+
+/* carousel */
+
+.carousel-item{
+  padding: 7% 15%;
+}
+
+.carousel-caption{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color:white;
+  font-weight: bold;
+}
+
+.carousel{
+  margin-top:-50px;
+}
+
+.con{
+  margin-top: 50px;
+  background-color: rgba(128,128,128,0.3);
+}
+
+/* button */
+
+.btn{
+  margin: 50px;
+  margin-left: 10px;
+
+}

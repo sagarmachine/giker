@@ -1,0 +1,282 @@
+body{
+  padding: 0;
+  background-image: url("img5.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
+.h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 70px;
+  font-family: cursive;
+  animation: test2 3s infinite;
+  animation-timing-function: linear;
+  display: table;
+}
+input{
+  color:white;
+}
+@keyframes test2 {
+  0% {
+    color: chartreuse;
+  }
+
+  10% {
+    color: tomato;
+  }
+
+  20% {
+    color: aqua;
+  }
+
+  30% {
+    color: #efa8e4;
+  }
+
+  40% {
+    color: #8ec6c5;
+  }
+
+  50% {
+    color: #363062;
+  }
+
+  60% {
+    color: #d8ebb5;
+  }
+
+  70% {
+    color: #f76a8c;
+  }
+
+  80% {
+    color: #c70039;
+  }
+
+  90% {
+    color: #f5fcc1;
+  }
+
+  100% {
+    color: #596157;
+  }
+}
+.con-out{
+  background-image:url("water.jpg");
+  background-size: cover;
+  opacity: 0.95;
+  border-radius: 8px;
+  color: white;
+  padding:2% 0;
+  box-shadow:0 0 5px white;
+  margin-bottom: 5%;
+}
+@font-face {
+  font-family: Shamber;
+  src: url(Shamber-ERo4.ttf) format("truetype");
+}
+.singup{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Shamber',monospace;
+  letter-spacing: 4px;
+  margin-bottom: 10%;
+}
+.select-btn{
+  display: flex;
+  padding-bottom: 0;
+  background: transparent;
+  margin-left: 2%;
+  margin-bottom: 15%;
+  justify-content: center;
+  align-items: center;
+  border:0.5px;
+  border-color: black;
+  color:white;
+
+}
+.select-div{
+  font-family: 'Roboto Slab', serif;
+  padding: 0;
+}
+option{
+  background-color:black;
+  border: 0;
+  border-color: black;
+}
+
+.location{
+  font-size: 15px;
+}
+
+
+.funkyradio{
+  font-size: 20px;
+  text-align:;
+}
+.funkyradio-default{
+  margin-top: 3%;
+}
+.funkyradio-default:first-child{
+  margin-top: 10%;
+}
+.radio1{
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.radioCheck{
+  margin-top: 10%;
+}
+/* radio and check */
+
+/* radio and check end*/
+fieldset{
+  text-align: center;
+ }
+
+textarea{
+  color: white;
+  width: 100%;
+  height: 10ch;
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  border-radius: 5px;
+  background: transparent;
+}
+hr{
+  border-color: white;
+  border: 1px 0 0 0;
+  border-style: dashed;
+  width: 90%;
+  margin: 1% auto;
+}
+.sp{
+  margin-top: 5%;
+}
+.custom-file-label{
+  background: transparent;
+}
+
+.link{
+  text-align: center;
+  margin-top: 5%;
+}
+#address{
+  background: none;
+  width: 100%;
+  border-width: 2px;
+  border-radius: 5px;
+  height: 50px;
+  border-color: white;
+}
+
+.signbtn{
+  display: flex;
+  justify-content: center;
+}
+.btn{
+    margin:auto;
+    margin-top: 0;
+}
+
+
+.tnc{
+  text-align: center;
+}
+
+.up{
+  z-index: 1;
+}
+.overlay{
+  height: 100vh;
+  width: 100vw;
+  background: #0f0524ad;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+::placeholder{
+  color: white;
+}
+.pinnlov{
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  flex-basis: 25%;
+  /* flex-flow: row; */
+  margin-top: 1%;
+  align-items: baseline;
+}
+
+#pin,#ins{
+  background: none;
+  width: 100%;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: white;
+  height:40px;
+  width:100%;
+}
+
+@media screen and (min-width:1000px) {
+  .mediaRadio{
+    display: flex;
+    justify-content: flex-start;
+    max-width: 65%;
+   }
+   .radioCheck{
+     margin-top: 1%;
+   }
+   .funkyradio-default{
+     margin-top: 1%;
+     font-size: 15px;
+   }
+   fieldset{
+     text-align:left;
+    }
+    .custom-file-label{
+      width: 100%;
+    }
+    .mediaRadio{
+      margin-top: 1%;
+    }
+    .con-out{
+      width:50vw;
+    }
+      .radio1{
+      margin-bottom: 2%;
+    }
+    .d{
+      display: flex;
+      max-width: 90%;
+    }
+    #address{
+      width: 50%;
+    }
+    .last{
+      display: flex;
+      max-width: 90%;
+      align-items:flex-end;
+    }
+    .btn{
+      height: 50%;
+      }
+    ::placeholder{
+      padding-left: 5px;
+    }
+    .tnc{
+      margin-top: 1%;
+    }
+    #desbox{
+       width: 22rem;
+    }
+    #achievements{
+      width: 22rem;
+    }
+}
