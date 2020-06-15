@@ -41,9 +41,7 @@ public class UserPhone {
 //////////////Constructors----
 	public UserPhone() {}
 
-	public UserPhone(User userid, String phone) {
-		super();
-		this.userid = userid;
+	public UserPhone( String phone) {
 		this.phone = phone;
 	}
 

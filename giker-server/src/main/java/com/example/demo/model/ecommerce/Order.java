@@ -67,11 +67,10 @@ public class Order {
 	@Column(name = "total_price")
 	private Double totalprice;
 	
-	
-	
 
 	@Column(name="mode")
 	private String mode;
+
 	
 	@Transient
 	private int totalitems;
@@ -96,17 +95,17 @@ public class Order {
 	public Order() {
 	}
 
-	public Order(int orderid, User username, Seller givercode, Date date, char status, UserAddress deliveryaddressid,
-			UserPhone contactno, Double totalprice) {
-		super();
-		this.orderid = orderid;
-		this.username = username;
-		this.givercode = givercode;
+	public Order( Date date,Date datee, char status, UserAddress deliveryaddressid,
+			UserPhone contactno, Double totalprice,String mode) {
+
 		this.date = date;
+		this.datee = datee;
 		this.status = status;
 		this.deliveryaddressid = deliveryaddressid;
 		this.contactno = contactno;
 		this.totalprice = totalprice;
+		this.mode=mode;
+
 	}
 
 	public Order(int orderid, User username, Seller givercode, Date date, char status, UserPhone contactno,
@@ -120,6 +119,9 @@ public class Order {
 		this.contactno = contactno;
 		this.totalprice = totalprice;
 	}
+
+
+
 
 	// Column Fields -Getters and
 	// Setters----------------------------------------------------------------------------

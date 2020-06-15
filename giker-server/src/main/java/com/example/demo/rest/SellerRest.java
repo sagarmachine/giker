@@ -19,7 +19,7 @@ import com.example.demo.rest.dto.AddMyProductRequest;
 import com.example.demo.rest.dto.AddMyProductResponse;
 import com.example.demo.service.ecommerce.ISellerService;
 
-@CrossOrigin( origins="http://localhost:4200")
+@CrossOrigin( origins="http://localhost:3000")
 @RestController
 public class SellerRest {
 

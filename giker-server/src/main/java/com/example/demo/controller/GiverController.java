@@ -262,7 +262,7 @@ public class GiverController {
 		if(seller!=null) {
 			logg.info("ALREADy EXIST <>><><><>");
 			//res.sendRedirect("http://localhost:4200/seller/"+((User)session.getAttribute("user")).getUsername());
-			return "redirect:http://localhost:4200/seller/"+seller.getGivercode();//call angular
+			return "redirect:http://localhost:3000/"+seller.getGivercode();//call angular
 			}
 		}catch(Exception ex) {
 			logg.info("EXCEPTION --->myShop()");

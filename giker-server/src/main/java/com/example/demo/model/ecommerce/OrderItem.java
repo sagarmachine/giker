@@ -25,6 +25,8 @@ public class OrderItem {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+
+
 	
 	@ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.PERSIST})
 	@JoinColumn(name = "order_id")
@@ -72,12 +74,9 @@ public class OrderItem {
 		this.price = productid.getPrice();
 	}
 
-	public OrderItem(Order orderid, ProductSeller productid, int quantity, Double totalprice) {
-		super();
-		this.orderid = orderid;
-		this.productid = productid;
+	public OrderItem(int quantity) {
+
 		this.quantity = quantity;
-		this.totalprice = totalprice;
 	}
 
 	// Column Fields -Getters and

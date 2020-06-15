@@ -2,6 +2,10 @@ package com.example.demo.rest;
 
 import java.util.List;
 
+import com.example.demo.dao.UserAddressRepository;
+import com.example.demo.dao.UserPhoneRepository;
+import com.example.demo.model.UserAddress;
+import com.example.demo.model.UserPhone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +22,12 @@ public class CustomerRest {
 	
 	@Autowired
 	ICustomerService customerservice;
+
+	@Autowired
+	UserAddressRepository userAddressRepository;
+
+	@Autowired
+	UserPhoneRepository userPhoneRepository;
 	
 	@GetMapping("/getCustomerDetail")
 	public Customer getCustomerDetail(@RequestParam("username") String username )
@@ -45,5 +55,22 @@ public class CustomerRest {
 		
 		return customerservice.getCustomerConfirmedOrdersByUserName(username);
 	    }
+
+	    @GetMapping("/getAddressList/{username}")
+	public List<UserAddress> getAddressList(String username){
+
+		return userAddressRepository.findByUseridUsername(username);
+
+		}
+
+	@GetMapping("/getPhoneList/{username}")
+	public List<UserPhone> getPhoneList(String username){
+
+		return userPhoneRepository.findByUseridUsername(username);
+
+	}
+
+
+
 	
 }

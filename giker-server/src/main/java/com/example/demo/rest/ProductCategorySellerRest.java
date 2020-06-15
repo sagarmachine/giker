@@ -3,7 +3,10 @@ package com.example.demo.rest;
 import java.util.HashMap;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.ecommerce.Product;
 import com.example.demo.model.ecommerce.ProductCategorySeller;
 import com.example.demo.service.ecommerce.IProductCategorySellerService;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @CrossOrigin
@@ -86,9 +91,7 @@ public class ProductCategorySellerRest {
 	}
 	
 	@GetMapping("/getProductsBySellerCode") 
-	public List<Product> getProductsBySellerCode(@RequestParam("sellercode") String seller){
-		   
-		        
+	public List<Product> getProductsBySellerCode(@RequestParam("sellercode") String seller, HttpServletRequest req){
 		return pcsservice.getProductsBySellerCode(seller);
 	}
 	

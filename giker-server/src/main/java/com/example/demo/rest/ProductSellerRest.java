@@ -2,6 +2,8 @@ package com.example.demo.rest;
 
 import java.util.List;
 
+import com.example.demo.dao.ecommerce.ProductSellerRepository;
+import com.example.demo.model.ecommerce.ProductSeller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,6 +27,9 @@ public class ProductSellerRest {
 	
 	@Autowired
 	private IProductSellerService productsellerservice;
+
+	@Autowired
+	ProductSellerRepository productSellerRepository;
 
 	@GetMapping("/getProductsByCategoryIdAndSellerCode")
 	public List<Product> getProductsByCategoryIdAndSellerCode(@RequestParam("id") int id,
@@ -55,6 +60,16 @@ public class ProductSellerRest {
 		return  productsellerservice.deleteMyProduct(id,sellercode);
 	}
 
+	@DeleteMapping("/deleteProductSeller")
+	public String deleteProductSeller(){
+
+		List<ProductSeller> byStock = productSellerRepository.findByStock(0);
+		for(ProductSeller p:byStock){
+			productSellerRepository.delete(p);
+		}
+
+		return "DELETED";
+	}
 	
 	
 

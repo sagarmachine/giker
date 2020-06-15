@@ -68,6 +68,8 @@ public class UserAddress {
 		this.country = country;
 		this.address = address;
 	}
+
+
 	
 	
 ///////Getters and setters	

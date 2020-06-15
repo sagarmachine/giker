@@ -120,7 +120,7 @@ return "slider";
 	{
 	//	logg.info("User-->"+req.getAttribute(""));
 		
-		return "redirect:http://localhost:4200/customer/"+((User)session.getAttribute("user")).getUsername()+"/"+subservicecode;
+		return "redirect:http://localhost:3001/"+((User)session.getAttribute("user")).getUsername()+"/"+subservicecode;
  
 	}
 	

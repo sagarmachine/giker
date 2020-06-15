@@ -149,6 +149,7 @@ public class SellerServiceImp implements ISellerService {
 				Date d= new SimpleDateFormat("dd-MM-yyyy").parse(date);
 				logg.info("Date=>"+d);
 				orders = orderrepo.findByGivercodeIdAndDateeAndStatusOrderByDate(sellercode,d,'C');
+
 				
 				
 				

@@ -7,10 +7,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.model.ecommerce.ProductCategory;
 import com.example.demo.model.ecommerce.ProductSeller;
 import com.example.demo.model.ecommerce.Seller;
+import org.springframework.data.jpa.repository.Query;
 
 public interface ProductSellerRepository extends JpaRepository<ProductSeller, Integer> {
 	
-	
+	//@Query("delete from ProductSeller where stock=0")
+	//void deleteAllByStock(int stock);
+
+	List<ProductSeller> findByStock(int s);
 	
 	List<ProductSeller> findBySellerAndProductCategoryid(Seller seller,ProductCategory pc);
 	
